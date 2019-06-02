@@ -1,0 +1,33 @@
+#include<stdio.h>
+main(void)
+{
+	int a[]={1, 2, 4,6, 3, 7, 8},i,j,l,n,m;
+	n= sizeof(a)/sizeof(a[i]);
+	for(i=0;i<n;i++)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			if(a[j]<=a[i])
+			{
+				l=a[i];
+				a[i]=a[j];
+				a[j]=l;
+			}
+		}
+	}
+	for(i=0;i<n;i++)
+	{
+		j=a[i];
+		if(j+1!=a[i+1])
+		{
+			m=j+1;
+			break;
+		}
+		else
+		{
+			m=a[n]+1;
+		}
+	}
+	printf("the missing element is %d",m);
+	
+}
