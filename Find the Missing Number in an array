@@ -1,3 +1,4 @@
+/*find the missing consicutive element of the given array*/
 #include<stdio.h>
 main(void)
 {
