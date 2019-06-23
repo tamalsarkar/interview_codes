@@ -1,0 +1,27 @@
+/*
+Run-length encoding is a fast and simple method of encoding strings.
+ The basic idea is to represent repeated successive characters as a single count and character. 
+For example, the string "AAAABBBCCDAA" would be encoded as "4A3B2C1D2A".
+Implement run-length encoding and decoding. 
+You can assume the string to be encoded have no digits and consists solely of alphabetic characters.
+ You can assume the string to be decoded is valid.
+*/
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char a[10]="AAAABCCDDA",c;
+    int i,j=0,k=2,l,n=1;
+    l=strlen(a);
+    c=a[0];
+    for(i=1;i<=l;i++)
+    {
+        if(c==a[i])
+            n++;
+        else
+        {
+            printf("%d%c",n,a[i-1]);
+            c=a[i];
+            n=1;
+        }
+    }
